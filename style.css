@@ -1,0 +1,44 @@
+#wrapper{
+	width:960px;
+	margin:0 auto;
+}
+
+#product-holder{
+	width:100%;
+	height: 400px;
+
+}
+h1{
+	text-align:center;
+}
+
+#intro{
+	margin:0 auto;
+}
+
+#intro h3{
+	width:75%;
+	text-align:center;
+	position:relative;
+	margin:0 auto;
+	
+}
+
+.product{
+	border: 1px solid black;
+	padding: 3%;
+	width: 100px;
+	margin:50px 40px;
+	float:left;
+	box-shadow:1px 3px 9px 1px #CCCCCC;	
+}
+.product img{
+	margin:10px;
+}
+.product label{
+	font-size:13px;
+}
+
+.product input{
+	margin:5px 40px;
+}
