@@ -1,6 +1,7 @@
 <?php 
 session_start();
 
+$page=__FILE__;
 
 if(isset($_SESSION['juices'])) { 
 
@@ -23,6 +24,7 @@ if(isset($_SESSION['juices'])) {
 	<head>
 		<title>P.H.P Session</title>
 		<link href="style.css" rel="stylesheet"  type="text/css">
+		<script type="text/javascript" src="javascript.js"></script>
 	</head>
 	
 	<body>
@@ -38,35 +40,32 @@ if(isset($_SESSION['juices'])) {
 			</div><!-- end of div intro -->
 			
 			<div id="product-holder">
-				<form id="frm" name="product-selection" method="post" id="juices-select" action="save.php">
+				<form id="frm" name="product-selection" method="post" id="juices-select" action="">
 					
 					<div class="product">
 						<img src="images/pineapple.jpg" alt="pineapple juice bottle">
 						<label>Select this product</label>
-						<input type="checkbox" name="juice[]" value="pineapple">	
+						<a href="save.php?id_product=pineapple&name_product=pineapple&page=<?php echo $page;?>" id="pineapple" onclick="return saveProduct();">pineapple</a>
 					</div>
 						
 					<div class="product">
 						<img src="images/strawberry.jpg" alt="strawberry juice bottle">
 						<label>Select this product</label>
-						<input type="checkbox" name="juice[]" value="strawberry">
+						<a href="save.php?id_product=strawberry&name_product=strawberry&page=<?php echo $page;?>" id="strawberry" onclick="return saveProduct();">strawberry</a>
 					</div>
 					
 					<div class="product">
 						<img src="images/apple.jpg" alt="apple juice bottle">
 						<label>Select this product</label>
-						<input type="checkbox" name="juice[]" value="apple">
+						<a href="save.php?id_product=apple&name_product=apple&page=<?php echo $page;?>" id="apple" onclick="return saveProduct();">apple</a>
 					</div>
 					
 					<div class="product">
 						<img src="images/tropical.jpg" alt="tropical juice bottle">
 						<label>Select this product</label>
-						<input type="checkbox" name="juice[]" value="tropical">
+						<a href="save.php?id_product=tropical&name_product=tropical&page=<?php echo $page;?>" id="tropical" onclick="return saveProduct();">tropical</a>
 					</div>
 					
-<input id="page" name="page" type="hidden" value="page2"/>
-
-						<div class="order"><input id="save" name="save" type="submit" value="save"/></div>
 				</form><!-- end of form juice-select-->
 				<div id="menu">
 					<a href="index.php"><button>page1</button>
